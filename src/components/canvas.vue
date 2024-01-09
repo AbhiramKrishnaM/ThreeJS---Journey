@@ -1,6 +1,9 @@
 <script setup>
 import * as THREE from "three";
 
+// get the canvas element
+const canvas = document.querySelector("canvas.webgl");
+
 // To see something we need 4 elements
 /**
  * Scene
