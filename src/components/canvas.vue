@@ -25,7 +25,7 @@ const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
 const mesh = new THREE.Mesh(geometry, material);
 
 // add it to the scene
-screen.add(mesh);
+scene.add(mesh);
 
 // for aspect ratio
 const sizes = { height: 800, width: 800 };
@@ -35,6 +35,9 @@ const camera = new THREE.PerspectiveCamera(75, sizes.height / sizes.width);
 
 // add to scene
 scene.add(camera);
+
+// renderer
+const renderer = new THREE.WebGLRenderer({ canvas });
 </script>
 
 <template>
