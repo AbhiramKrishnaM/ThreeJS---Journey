@@ -24,10 +24,18 @@ const mesh = new THREE.Mesh(geometry, material);
 // add it to the scene
 screen.add(mesh);
 
+// for aspect ratio
+const sizes = { height: 800, width: 800 };
+
 // Camera
-const camera = new THREE.PerspectiveCamera();
+const camera = new THREE.PerspectiveCamera(75, sizes.height / sizes.width);
+
+// add to scene
+scene.add(camera);
 </script>
 
 <template>
-  <div>This is canvas</div>
+  <div>
+    <canvas class="webgl"></canvas>
+  </div>
 </template>
