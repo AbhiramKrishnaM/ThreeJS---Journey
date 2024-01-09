@@ -1,5 +1,9 @@
-<script setup></script>
+<script setup>
+import Canvas from "./components/canvas.vue";
+</script>
 
 <template>
-  <h1 class="text-3xl font-bold underline">Hello world!</h1>
+  <div class="h-screen w-screen flex items-center justify-center">
+    <Canvas />
+  </div>
 </template>
