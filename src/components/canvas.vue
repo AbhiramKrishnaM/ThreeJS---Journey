@@ -23,7 +23,9 @@ function renderCanvas() {
    * Mesh is a combination of Geometry and Materials
    */
   const geometry = new THREE.BoxGeometry(1, 1, 1);
-  const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+  const material = new THREE.MeshBasicMaterial({
+    color: 0xff0000,
+  });
   const mesh = new THREE.Mesh(geometry, material);
 
   // add it to the scene
@@ -34,6 +36,9 @@ function renderCanvas() {
 
   // Camera
   const camera = new THREE.PerspectiveCamera(75, sizes.height / sizes.width);
+
+  // Positioning camera
+  camera.position.z = 3;
 
   // add to scene
   scene.add(camera);
