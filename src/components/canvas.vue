@@ -38,6 +38,9 @@ scene.add(camera);
 
 // renderer
 const renderer = new THREE.WebGLRenderer({ canvas });
+
+// resize the renderer
+renderer.setSize(sizes.width, sizes.height);
 </script>
 
 <template>
