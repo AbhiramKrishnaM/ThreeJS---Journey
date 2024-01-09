@@ -11,6 +11,14 @@ import * as THREE from "three";
 
 // Scene
 const scene = new THREE.Scene();
+
+// Object
+/**
+ * A visible object in three is called a mesh
+ * Mesh is a combination of Geometry and Materials
+ */
+const geometry = new THREE.BoxGeometry(1, 1, 1);
+const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
 </script>
 
 <template>
