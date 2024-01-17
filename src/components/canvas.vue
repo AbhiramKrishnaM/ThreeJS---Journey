@@ -31,7 +31,7 @@ function renderCanvas() {
   /**
    * Position inherits Vector3
    */
-  mesh.position.y = 1;
+  // mesh.position.y = 1;
 
   // length
   // console.log("length", mesh.position.length());
@@ -44,6 +44,9 @@ function renderCanvas() {
 
   // set
   // mesh.position.set(1, -1, 1);
+
+  // scale
+  mesh.scale.x = 1;
 
   // add it to the scene
   scene.add(mesh);
