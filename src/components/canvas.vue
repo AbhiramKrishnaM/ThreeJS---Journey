@@ -28,7 +28,22 @@ function renderCanvas() {
   });
   const mesh = new THREE.Mesh(geometry, material);
 
+  /**
+   * Position inherits Vector3
+   */
   mesh.position.y = 1;
+
+  // length
+  // console.log("length", mesh.position.length());
+
+  // distanceTo
+  // console.log("distance to", mesh.position.distanceTo(camera.position));
+
+  // normalize
+  // mesh.position.normalize();
+
+  // set
+  // mesh.position.set(1, -1, 1);
 
   // add it to the scene
   scene.add(mesh);
