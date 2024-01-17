@@ -28,6 +28,8 @@ function renderCanvas() {
   });
   const mesh = new THREE.Mesh(geometry, material);
 
+  mesh.position.y = 1;
+
   // add it to the scene
   scene.add(mesh);
 
