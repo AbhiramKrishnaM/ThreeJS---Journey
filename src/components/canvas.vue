@@ -48,6 +48,17 @@ function renderCanvas() {
   // scale
   mesh.scale.x = 1;
 
+  // Rotation
+  // mesh.rotation.y = 10;
+  /**
+   * Fixing the gimbal lock
+   * setting the order
+   */
+
+  // mesh.rotation.reorder("YXZ");
+  // mesh.rotation.y = 2;
+  // mesh.rotation.x = 4;
+
   // add it to the scene
   scene.add(mesh);
 
