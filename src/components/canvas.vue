@@ -71,6 +71,9 @@ function renderCanvas() {
   // Positioning camera
   camera.position.z = 3;
 
+  // Look at
+  camera.lookAt(new THREE.Vector3(0, 0, 0));
+
   // add to scene
   scene.add(camera);
 
