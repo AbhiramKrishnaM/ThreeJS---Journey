@@ -49,8 +49,18 @@ function renderCanvas() {
   // resize the renderer
   renderer.setSize(sizes.width, sizes.height);
 
-  // render
-  renderer.render(scene, camera);
+  // Animation
+  const tick = () => {
+    // update objects
+    // mesh.position.x += 0.001;
+
+    // render
+    renderer.render(scene, camera);
+
+    window.requestAnimationFrame(tick);
+  };
+
+  tick();
 }
 
 // hooks
