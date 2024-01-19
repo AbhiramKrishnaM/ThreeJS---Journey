@@ -49,16 +49,21 @@ function renderCanvas() {
   // resize the renderer
   renderer.setSize(sizes.width, sizes.height);
 
-  let time = Date.now();
+  // let time = Date.now();
+
+  // Threejs inbuilt time
+  const clock = new THREE.Clock();
 
   // Animation
   const tick = () => {
-    const currentTime = Date.now();
-    const delta = currentTime - time;
-    time = currentTime;
+    // const currentTime = Date.now();
+    // const delta = currentTime - time;
+    // time = currentTime;
+
+    const elapsedTime = clock.getElapsedTime();
 
     // update objects
-    mesh.rotation.y += 0.008 * delta;
+    mesh.rotation.y = elapsedTime;
 
     // render
     renderer.render(scene, camera);
