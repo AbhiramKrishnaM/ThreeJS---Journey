@@ -49,10 +49,16 @@ function renderCanvas() {
   // resize the renderer
   renderer.setSize(sizes.width, sizes.height);
 
+  let time = Date.now();
+
   // Animation
   const tick = () => {
+    const currentTime = Date.now();
+    const delta = currentTime - time;
+    time = currentTime;
+
     // update objects
-    // mesh.position.x += 0.001;
+    mesh.rotation.y += 0.008 * delta;
 
     // render
     renderer.render(scene, camera);
