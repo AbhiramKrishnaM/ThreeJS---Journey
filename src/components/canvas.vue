@@ -32,10 +32,26 @@ function renderCanvas() {
   scene.add(mesh);
 
   // for aspect ratio
-  const sizes = { height: 800, width: 800 };
+  const sizes = { height: window.innerHeight, width: window.innerWidth };
+
+  // resize event
+  window.addEventListener("resize", () => {
+    sizes.width = window.innerWidth;
+    sizes.height = window.innerHeight;
+
+    camera.aspect = sizes.width / sizes.height;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize(sizes.width, sizes.height);
+  });
 
   // Camera
-  const camera = new THREE.PerspectiveCamera(75, sizes.height / sizes.width);
+  const camera = new THREE.PerspectiveCamera(
+    75,
+    sizes.height / sizes.width,
+    0.1,
+    1000
+  );
 
   // Positioning camera
   camera.position.z = 3;
@@ -64,3 +80,11 @@ onMounted(() => {
     <canvas class="webgl"></canvas>
   </div>
 </template>
+
+<style scoped>
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+</style>
